@@ -4,16 +4,21 @@ A portable static website for showing DiaryOS character timeline feeds.
 
 ## Online display
 
-GitHub Pages should publish this repository from the `main` branch root. The public entry is:
+Public site:
 
-- `index.html`: character list
-- `characters/<character_id>/index.html`: read-only timeline page
+```text
+https://clickmeow.github.io/diaryos-character-feeds/
+```
 
-The online site is display-only. It does not need Python, a backend, upload APIs, or editing permission.
+The online site is display-only. It is published from the `gh-pages` branch and contains only:
+
+- `index.html`
+- `characters/`
+- `shared/styles.css`
+
+The local editor and Python scripts stay on `main` for maintenance.
 
 ## Local editing
-
-The local editor is kept for maintaining feeds before publishing.
 
 Run from this folder:
 
@@ -34,6 +39,10 @@ To refresh the read-only pages after editing:
 ```powershell
 python shared\render_feed.py
 ```
+
+## Publish after editing
+
+After editing and rendering locally, commit to `main`, then refresh the static `gh-pages` branch with the display files.
 
 ## Data contract
 
